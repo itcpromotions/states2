@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{{city}}
+<form method='POST' action='/city_edit/{{ city.pk }}/'>
+
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<input type ='submit' value='Save'>
+
+</form>
+
+
+{% endblock %}
